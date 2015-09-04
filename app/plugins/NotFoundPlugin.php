@@ -20,7 +20,7 @@ class NotFoundPlugin extends Plugin
 	 * @param Event $event
 	 * @param Dispatcher $dispatcher
 	 */
-	public function beforeException(Event $event, MvcDispatcher $dispatcher, Exception $exception)
+	public function beforeException(Event $event, MvcDispatcher $dispatcher, DispatcherException $exception)
 	{
 		if ($exception instanceof DispatcherException) {
 			switch ($exception->getCode()) {
